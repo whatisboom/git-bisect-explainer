@@ -146,6 +146,14 @@
     grid-template-columns: 52px 1fr;
     gap: 0 20px;
     position: relative;
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .step.visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .step-line {
@@ -258,6 +266,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 24px;
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .result-box.visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .stat-label {
