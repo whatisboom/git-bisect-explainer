@@ -297,3 +297,57 @@
     font-style: italic;
     text-align: center;
   }
+
+  /* ---- Responsive ---- */
+  @media (max-width: 600px) {
+    body { padding: 28px 18px; }
+
+    h1 { font-size: 32px; }
+
+    .subtitle { font-size: 16px; }
+
+    .commit {
+      width: 28px;
+      height: 28px;
+      font-size: 8px;
+      border-width: 1.5px;
+    }
+
+    .commit.culprit {
+      box-shadow: 0 0 0 3px rgba(201,96,64,0.2);
+    }
+
+    .commit.checking {
+      box-shadow: 0 0 0 3px rgba(123,109,184,0.18);
+    }
+
+    .connector { height: 2px; min-width: 2px; }
+
+    .vlabel { width: 28px; font-size: 7px; }
+
+    .step { grid-template-columns: 40px 1fr; gap: 0 14px; }
+    .step-title { font-size: 17px; }
+    .step-body { font-size: 14px; }
+
+    .ic {
+      width: 28px;
+      height: 28px;
+      font-size: 8px;
+      border-width: 1px;
+    }
+
+    .ic-conn { min-width: 2px; }
+
+    .result-box {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 22px 20px;
+    }
+
+    .divider {
+      width: 100%;
+      height: 1px;
+    }
+
+    .stat-num { font-size: 32px; }
+  }
