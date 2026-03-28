@@ -19,13 +19,16 @@
 <body>
 <div class="page">
 
-  <div class="header">
+  <header class="header">
     <div class="eyebrow">Git explained simply</div>
     <h1>How <em>git bisect</em><br>finds a bug</h1>
     <p class="subtitle">You know your app worked last week and it's broken now. Git bisect finds the exact moment things went wrong — without checking every version.</p>
-  </div>
+  </header>
+
+  <main>
 
   <!-- Full timeline overview -->
+  <section aria-label="Version timeline">
   <div class="timeline-wrap">
     <div class="section-label">Your version history (v1 → v10)</div>
     <div class="timeline">
@@ -53,8 +56,10 @@
       <div class="vlabel" style="color:#C96040;">✗ broken</div>
     </div>
   </div>
+  </section>
 
   <!-- Steps -->
+  <section aria-label="Bisect walkthrough">
   <div class="section-label" style="margin-bottom:24px;">How it gets there — in 3 checks</div>
   <div class="steps">
 
@@ -137,8 +142,10 @@
     </div>
 
   </div>
+  </section>
 
   <!-- Result box -->
+  <section aria-label="Results">
   <div class="result-box">
     <div>
       <div class="stat-label">Versions to check</div>
@@ -160,6 +167,9 @@
   </div>
 
   <p class="footnote">With 1,000 versions, bisect still only needs ~10 checks. With 1,000,000 — just 20.</p>
+  </section>
+
+  </main>
 
 </div>
 </body>
