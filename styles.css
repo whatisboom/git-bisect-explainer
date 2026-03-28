@@ -83,6 +83,7 @@
     flex-shrink: 0;
     position: relative;
     border: 2px solid transparent;
+    transition: background 0.4s ease, border-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
   }
 
   .commit.unknown {
@@ -117,6 +118,7 @@
     flex: 1;
     height: 2px;
     background: #C8BFB0;
+    transition: background 0.4s ease;
   }
   .connector.active {
     background: #7B6DB8;
