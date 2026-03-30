@@ -23,17 +23,17 @@ document.addEventListener('DOMContentLoaded', () => {
     1: {
       commits: {1:'good',2:'unknown',3:'unknown',4:'unknown',5:'checking',6:'unknown',7:'unknown',8:'unknown',9:'unknown',10:'bad'},
       labels: {1:'✓ works',2:'',3:'',4:'',5:'checking…',6:'',7:'',8:'',9:'',10:'✗ broken'},
-      activeConnectors: [4]
+      activeConnectors: [3]
     },
     2: {
       commits: {1:'good',2:'good',3:'good',4:'good',5:'good',6:'unknown',7:'unknown',8:'checking',9:'unknown',10:'bad'},
       labels: {1:'✓ works',2:'✓ works',3:'✓ works',4:'✓ works',5:'✓ works',6:'',7:'',8:'checking…',9:'',10:'✗ broken'},
-      activeConnectors: [5, 6, 7]
+      activeConnectors: [4, 5, 6]
     },
     3: {
       commits: {1:'good',2:'good',3:'good',4:'good',5:'good',6:'culprit',7:'bad',8:'bad',9:'bad',10:'bad'},
       labels: {1:'✓ works',2:'✓ works',3:'✓ works',4:'✓ works',5:'✓ works',6:'🐛 culprit',7:'✗ broken',8:'✗ broken',9:'✗ broken',10:'✗ broken'},
-      activeConnectors: [5]
+      activeConnectors: [4, 5]
     }
   };
 
