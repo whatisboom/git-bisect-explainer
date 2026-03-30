@@ -91,4 +91,34 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0 });
 
   stepEls.forEach((el) => timelineObserver.observe(el));
+
+  // ---- Stat counter animation ----
+  function animateCounter(el, target, duration) {
+    const start = performance.now();
+    const update = (now) => {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(eased * target);
+      if (progress < 1) requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+  }
+
+  const statNums = document.querySelectorAll('.stat-num');
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const text = el.textContent.trim();
+        const num = parseInt(text);
+        if (!isNaN(num)) {
+          el.textContent = '0';
+          animateCounter(el, num, 800);
+        }
+        statsObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  statNums.forEach((el) => statsObserver.observe(el));
 });
